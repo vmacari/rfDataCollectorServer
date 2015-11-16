@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="org.restlet:org.restlet:2.0-M3" type="repository">
+    <properties maven-id="org.restlet:org.restlet:2.0-M3" />
+    <CLASSES>
+      <root url="jar://$M2_REPO$/org/restlet/org.restlet/2.0-M3/org.restlet-2.0-M3.jar!/" />
+      <root url="jar://$M2_REPO$/org/osgi/osgi_R4_core/1.0/osgi_R4_core-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$M2_REPO$/org/restlet/org.restlet/2.0-M3/org.restlet-2.0-M3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - nodes@localhost" uuid="ea3ee8d8-1700-4791-b7a7-c1186ad1090e">
+    <database-info product="MySQL" version="5.6.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="nodes"/>
+    <table name="data" schema="" catalog="nodes" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" remarks="VGhlIHRhYmxlIGhvbGRzIHJlY2VpdmVkIGRhdGEg" autoIncrement="true"/>
+      <column name="data" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="data_type" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="node_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="sensor_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_node_id" columns="node_id" ref-table="node" ref-schema="" ref-catalog="nodes" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_sensor_id" columns="sensor_id" ref-table="sensor" ref-schema="" ref-catalog="nodes" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="id_UNIQUE" unique="true" columns="id"/>
+      <index name="fk_node_id_idx" unique="false" columns="node_id"/>
+      <index name="fk_sensor_id_idx" unique="false" columns="sensor_id"/>
+    </table>
+    <table name="log" schema="" catalog="nodes" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="message" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="node" schema="" catalog="nodes" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="battery_level" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="configuration" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="protocol" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="fw_version" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="is_rebooting" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="last_update_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="version" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_node_id" table="data" schema="" catalog="nodes" columns="node_id"/>
+      <exported-key name="sensor_ibfk_1" table="sensor" schema="" catalog="nodes" columns="node_id"/>
+      <index name="id_UNIQUE" unique="true" columns="id"/>
+    </table>
+    <table name="sensor" schema="" catalog="nodes" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="node_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id,node_id"/>
+      <foreign-key name="sensor_ibfk_1" columns="node_id" ref-table="node" ref-schema="" ref-catalog="nodes" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_sensor_id" table="data" schema="" catalog="nodes" columns="sensor_id"/>
+      <index name="fk_node_id_idx" unique="false" columns="node_id"/>
+    </table>
+  </data-source>
+</component>

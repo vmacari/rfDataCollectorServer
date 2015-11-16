@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="com.strategicgains:HyperExpress-Core:2.5" type="repository">
+    <properties maven-id="com.strategicgains:HyperExpress-Core:2.5" />
+    <CLASSES>
+      <root url="jar://$M2_REPO$/com/strategicgains/HyperExpress-Core/2.5/HyperExpress-Core-2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$M2_REPO$/com/strategicgains/HyperExpress-Core/2.5/HyperExpress-Core-2.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$M2_REPO$/com/strategicgains/HyperExpress-Core/2.5/HyperExpress-Core-2.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
