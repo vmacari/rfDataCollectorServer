@@ -17,9 +17,7 @@ import java.util.Date;
  */
 
 @DatabaseTable(tableName = "node")
-public class Node  { //extends BaseEntity<Integer>  {
-
-  //  private static final long serialVersionUID = 1L;
+public class Node  {
 
     @DatabaseField()
     private String name;

@@ -19,13 +19,6 @@ public class Data   {
 
     @DatabaseField(id = true, indexName = "primaryIndex", columnName = "id")
     private int id;
-
-//    @DatabaseField(canBeNull = false, foreign = true)
-//    private Node node;
-
-//    @DatabaseField(canBeNull = false, foreign = true)
-//    private Sensor sensor;
-
     @DatabaseField(columnName = "node_id")
     private Integer nodeId;
 

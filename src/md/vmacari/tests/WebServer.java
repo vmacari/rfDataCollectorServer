@@ -1,9 +1,10 @@
-package md.vmacari;
+package md.vmacari.tests;
 
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
+import md.vmacari.Main;
 
 import java.io.IOException;
 import java.io.OutputStream;

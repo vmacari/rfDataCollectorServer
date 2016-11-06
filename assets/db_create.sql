@@ -5,9 +5,11 @@
 -- Project: Name of the project
 -- Author: Veaceslav Macari
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+use nodes;
+
+-- SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+--  SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+-- SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 drop table `nodes`.`node`;
 CREATE TABLE IF NOT EXISTS `nodes`.`node` (
@@ -36,18 +38,9 @@ CREATE TABLE IF NOT EXISTS `nodes`.`data` (
   `time` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
-  INDEX `fk_node_id_idx` (`node_id` ASC),
-  INDEX `fk_sensor_id_idx` (`sensor_id` ASC),
-  CONSTRAINT `fk_node_id`
-    FOREIGN KEY (`node_id`)
-    REFERENCES `nodes`.`node` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_sensor_id`
-    FOREIGN KEY (`sensor_id`)
-    REFERENCES `nodes`.`sensor` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_node_id_idx` (`node_id` ASC)
+  )
+
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;

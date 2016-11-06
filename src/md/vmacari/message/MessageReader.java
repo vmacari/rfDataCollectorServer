@@ -5,6 +5,7 @@
  */
 package md.vmacari.message;
 
+
 import gnu.io.*;
 import md.vmacari.comm.PacketReceiverListener;
 import md.vmacari.messages.MessageGeneric;
@@ -127,6 +128,7 @@ public class MessageReader implements Runnable, SerialPortEventListener {
     }
 
     private String remaining = "";
+
     @Override
     public void serialEvent(SerialPortEvent event) {
         
@@ -219,4 +221,5 @@ public class MessageReader implements Runnable, SerialPortEventListener {
             Logger.getLogger(MessageReader.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
 }

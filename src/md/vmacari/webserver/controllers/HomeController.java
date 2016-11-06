@@ -83,7 +83,7 @@ public class HomeController
 //            String htmlOut = file.toString();
 //            System.out.println(htmlOut);
 //            return htmlOut;
-            return file.toString();
+            return file; //.toString();
 
         } catch (IOException e) {
             e.printStackTrace();

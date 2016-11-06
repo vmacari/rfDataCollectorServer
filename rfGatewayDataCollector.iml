@@ -9,7 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6 (2)" level="project" />
-    <orderEntry type="library" name="org.rxtx:rxtx:2.1.7" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.36-bin" level="project" />
     <orderEntry type="library" name="com.j256.ormlite:ormlite-jdbc:4.45" level="project" />
     <orderEntry type="library" name="com.j256.ormlite:ormlite-core:4.45" level="project" />
@@ -17,5 +16,6 @@
     <orderEntry type="library" name="org.freemarker:freemarker:2.3.23" level="project" />
     <orderEntry type="library" name="org.restlet:org.restlet:2.0-M3" level="project" />
     <orderEntry type="library" name="com.strategicgains:HyperExpress-Core:2.5" level="project" />
+    <orderEntry type="library" name="RXTXcomm" level="project" />
   </component>
 </module>

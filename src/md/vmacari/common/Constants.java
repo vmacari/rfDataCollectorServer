@@ -8,7 +8,7 @@ public class Constants {
         public static final String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
         public static final String DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/nodes";
         public static final String USERNAME = "root";
-        public static final String PASSWORD = "";
+        public static final String PASSWORD = "123123123";
         public static final String MAX_POOL = "250"; // set your own limit
     }
 
